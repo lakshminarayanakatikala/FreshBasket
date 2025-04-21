@@ -53,25 +53,23 @@ const Cart = () => {  //prebuiltui
            }
            else{
                 //place order stripe
-
                 const {data} = await axios.post('/api/order/stripe',{
                     userId : user._id,
                     items:cartArray.map( item =>({product : item._id , quantity:item.quantity})) ,
                     address : selectedAddress._id
                  })
- 
+                    console.log(data)
                  if(data.success){
                     //open the url
                     setCartItems({})
                     window.location.replace(data.url)
+                    // navigate('/my-orders')
                  }else{
                      toast.error(data.message)
   
                  }
            }
-        // else{
-        //         toast.error("Invalid Payment Option")
-        //    }
+
         } catch (error) {
             toast.error(error.message) 
         }

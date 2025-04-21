@@ -36,7 +36,7 @@ const NavBar = () => {
     },[searchQuery])
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+    <nav className="z-50 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
         <NavLink to='/' onClick={()=> setOpen(false)}> {/* if click the log if the mobile menu is closed */}
             <img className="h-9 " src={assets.logo_2} alt="Logo" />
@@ -93,8 +93,8 @@ const NavBar = () => {
             <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
             <NavLink to='/' onClick={()=>setOpen(false)}>Home</NavLink>   {/* setOpen is use to click any option in mobile view close the menu*/}
             <NavLink to='/products' onClick={()=>setOpen(false)}>All Products</NavLink>
-            {user && <NavLink to='/' onClick={()=>setOpen(false)}>My Orders</NavLink>} {/* my only show login the user so we  use context  */}
-            <NavLink to='/' onClick={()=>setOpen(false)}>Contact</NavLink>
+            {user && <NavLink to='/my-orders' onClick={()=>setOpen(false)}>My Orders</NavLink>} {/* my only show login the user so we  use context  */}
+            <NavLink to='/contact-us' onClick={()=>setOpen(false)}>Contact</NavLink>
            
          {/*  if the user is login shows logout button other wise shows login button*/}
            {!user ?  (
