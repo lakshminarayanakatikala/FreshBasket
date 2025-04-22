@@ -30,7 +30,7 @@ export const register = async (req,res)=>{
 
         })
 
-        return res.json({success : true , user : {email : user.email , name : user.name}})
+        return res.json({success : true ,message:"Register Successfully" , user : {email : user.email , name : user.name}})
 
     } catch (error) {
         console.log(error.message);
