@@ -8,7 +8,7 @@ const AllProducts = () => {
     useEffect(()=>{
         //navbar serch 
         if (searchQuery.length > 0) {
-            setFilteredProducts(products.filter(product => product.name.toLowerCase().includes(searchQuery.toLowerCase())))       
+            setFilteredProducts(products?.filter(product => product?.name.toLowerCase().includes(searchQuery.toLowerCase())))       
         }else{
           setFilteredProducts(products)  
         }
@@ -28,7 +28,7 @@ const AllProducts = () => {
        </div> */}
 
 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-6 lg:gap-8 justify-items-center">
-    {filteredProducts.filter((product) => product.inStock).map((product, index) => (
+    {filteredProducts?.filter((product) => product?.inStock).map((product, index) => (
         <ProductCard key={index} product={product} />
     ))}
 </div>
