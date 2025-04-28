@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext, useEffect ,useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast";
@@ -139,7 +139,7 @@ export const AppContextProvider = ({ children }) => {
   
 
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         fetchUser()
         fetchSeller()
         fetchProducts()
