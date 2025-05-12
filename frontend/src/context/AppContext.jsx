@@ -55,7 +55,7 @@ export const AppContextProvider = ({ children }) => {
     const fetchProducts = async ()=>{
         try {
             const {data} = await axios.get('/api/product/list')
-            // console.log(data)
+            console.log(data)
             if(data.success){
                 setProducts(data.products)
                 // const inStockProducts = data.products.filter(product => product.isStock);
@@ -139,7 +139,7 @@ export const AppContextProvider = ({ children }) => {
   
 
 
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         fetchUser()
         fetchSeller()
         fetchProducts()
@@ -160,7 +160,7 @@ export const AppContextProvider = ({ children }) => {
   
             }
         }
-        console.log(user)
+        // console.log(user)
         if(user){
             updateCart()
         }

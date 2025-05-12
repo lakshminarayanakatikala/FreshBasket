@@ -53,7 +53,7 @@ const App = () => {
       <Toaster /> {/* if the toaster is used to add tosty notifications */}
 
       {/* in the seller path dont need the navbar and padding so we can use ternary operator */}
-        {isSellerPath ? null :  <NavBar />}
+        {isSellerPath ? null : <NavBar />}
         {showUserLogin ? <Login /> : null}
         <div className={`${isSellerPath ? '' : "px-6 md:px-16 lg:px-24 xl:px-32 "}`}>
           <Routes>

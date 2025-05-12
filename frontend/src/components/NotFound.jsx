@@ -12,7 +12,7 @@ const NotFound = () => {
             <Link to={'/'} class="bg-gray-800 px-7 py-2.5 text-white rounded-md active:scale-95 transition-all">
                 Return Home
             </Link>
-            <Link to={'/'} class="border border-gray-300 px-7 py-2.5 text-gray-800 rounded-md active:scale-95 transition-all">
+            <Link to={'/contact-us'} class="border border-gray-300 px-7 py-2.5 text-gray-800 rounded-md active:scale-95 transition-all">
                 Contact support
             </Link>
         </div>

@@ -13,7 +13,7 @@ const Login = () => {
         try {
             e.preventDefault()
             const {data} = await axios.post(`/api/user/${state}`,{name,email,password})
-            console.log(data)
+            // console.log(data)
             if(data.success){
                 toast.success(data.message)
                 navigate('/')
